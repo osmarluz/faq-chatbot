@@ -19,7 +19,8 @@ class App < Sinatra::Base
       response = InterpretService.call(result["action"], result["parameters"])
     end
 
-    content_type :json {
+    content_type :json 
+    {
       "speech": response,
       "displayText": response,
       "source": "Slack"
